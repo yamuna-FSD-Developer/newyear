@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown and GIF Display</title>
+  <link rel="stylesheet" href="2812.css">
+</head>
+<body>
+
+<div id="countdown">Countdown: <span id="timer">10</span></div>
+<div id="gifContainer" style="display: none;">
+  <img src="https://quotessquare.com/events/wp-content/uploads/2023/05/Happy-New-Year-2024-Gif-Greeting-Cards.gif" alt="GIF">
+</div>
+
+<script>
+  // Set the countdown duration in seconds
+  const countdownDuration = 10;
+  let countdown = countdownDuration;
+
+  // Function to update the countdown
+  function updateCountdown() {
+    document.getElementById('timer').innerText = countdown;
+    countdown--;
+
+    if (countdown < 0) {
+      // Display the GIF and hide the countdown
+      document.getElementById('countdown').style.display = 'none';
+      document.getElementById('gifContainer').style.display = 'block';
+    } else {
+      // Continue the countdown
+      setTimeout(updateCountdown, 1000);
+    }
+  }
+
+  // Start the countdown when the page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCountdown();
+  });
+</script>
+
+</body>
+</html>

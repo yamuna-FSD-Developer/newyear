@@ -1,0 +1,23 @@
+#countdown {
+    font-size: 75px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    background-color: black;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #gifContainer {
+    text-align: center;
+    width: fit-content;
+    max-width: 100%;
+    
+  }
+ 
